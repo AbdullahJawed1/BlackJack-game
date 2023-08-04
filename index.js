@@ -15,6 +15,7 @@ let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips
 
+
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
@@ -26,6 +27,7 @@ function getRandomCard() {
     }
 }
 
+
 function startGame() {
     isAlive = true
     let firstCard = getRandomCard()
@@ -34,6 +36,7 @@ function startGame() {
     sum = firstCard + secondCard
     renderGame()
 }
+
 
 function renderGame() {
     cardsEl.textContent = "Cards: "
@@ -53,6 +56,7 @@ function renderGame() {
     }
     messageEl.textContent = message
 }
+
 
 
 function newCard() {
